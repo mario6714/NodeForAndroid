@@ -10,6 +10,7 @@ jobs:
     - uses: actions/checkout@v3
     - uses: docker-practice/actions-setup-docker@master
     - run: docker pull sumucheng/build-node:latest
+    - run: docker images
     - name: Rename build-node image
       run: docker rename sumcheng/build-node:latest build-node
     # - name: Copy container output files to local
