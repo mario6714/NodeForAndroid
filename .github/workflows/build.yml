@@ -14,10 +14,24 @@ jobs:
       run: docker run --privileged --name container -v /home/runner/work/NodeForAndroid/NodeForAndroid/swap:/swap -d build-node /bin/build arm64
     - name: Wait for the container
       run: docker wait container
-    
-    # - name: Fetch headers
-    #   run: export HEADERS_ONLY=1 && python3 ./tools/install.py install headers/
-    # - uses: actions/upload-artifact@v3
-    #   with:
-    #     name: release.zip
-    #     path: out/Release
+    - name: Copy container output files to local
+      run: docker cp container:/root/node/headers .
+        |docker cp container:/root/node/out/Release/node .
+        |docker cp container:/root/node/out/Release/libnode.so .
+        |docker cp container:/system/lib/libc++_shared.so .
+    - uses: actions/upload-artifact@v3
+      with:
+        name: headers.zip
+        path: ./headers
+    - uses: actions/upload-artifact@v3
+      with:
+        name: node
+        path: ./node
+    - uses: actions/upload-artifact@v3
+      with:
+        name: libnode.so
+        path: ./libnode.so
+    - uses: actions/upload-artifact@v3
+      with:
+        name: libc++_shared.so
+        path: ./libc++_shared.so
