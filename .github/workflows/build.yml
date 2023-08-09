@@ -1,0 +1,23 @@
+name: Build Android
+
+on:
+  workflow_dispatch
+
+jobs:
+  build-android:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4.6.0
+      with:
+        python-version: '3.9'
+    - name: Show myself
+      run: pwd
+    # - name: Fetch headers
+    #   run: export HEADERS_ONLY=1 && python3 ./tools/install.py install headers/
+    # - uses: actions/upload-artifact@v3
+    #   with:
+    #     name: release.zip
+    #     path: out/Release
