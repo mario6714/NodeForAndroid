@@ -11,8 +11,8 @@ jobs:
     - uses: docker-practice/actions-setup-docker@master
     - name: Pull build-node image
     - run: docker pull sumucheng/build-node:latest
-    - name: Create the container from build-node image
-    - run: docker run --privileged -d -v /home/runner/work/NodeForAndroid/NodeForAndroid/swap:/swap --name container sumucheng/build-node:latest /bin/build aarch64
+    - name: Create the container from build-node image & Wait for the container
+    - run: docker wait $(docker run --privileged -d -v /home/runner/work/NodeForAndroid/NodeForAndroid/swap:/swap --name container sumucheng/build-node:latest /bin/build aarch64)
     - name: Copy container output files to local
       run: docker cp container:/root/node/headers .
         |docker cp container:/root/node/out/Release/node .
