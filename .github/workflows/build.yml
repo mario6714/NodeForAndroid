@@ -9,7 +9,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Run build-node image and set volume & Wait for the container
-      run: docker run --name container sumcheng/build-node:latest
+      run: docker run sumcheng/build-node:latest
     # - name: Copy container output files to local
     #   run: docker cp container:/root/node/headers .
     #     |docker cp container:/root/node/out/Release/node .
