@@ -9,9 +9,9 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - uses: docker-practice/actions-setup-docker@master
-    - run: docker pull sumucheng/build-node
+    - run: docker pull sumucheng/build-node:latest
     - name: Rename build-node image
-      run: docker rename sumcheng/build-node build-node
+      run: docker rename sumcheng/build-node:latest build-node
     # - name: Copy container output files to local
     #   run: docker cp container:/root/node/headers .
     #     |docker cp container:/root/node/out/Release/node .
