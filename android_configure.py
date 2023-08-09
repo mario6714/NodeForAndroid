@@ -44,6 +44,7 @@ elif arch in ("aarch64", "arm64"):
 elif arch == "x86":
     DEST_CPU = "ia32"
     TOOLCHAIN_PREFIX = "i686-linux-android"
+    arch = "ia32"
 elif arch == "x86_64":
     DEST_CPU = "x64"
     TOOLCHAIN_PREFIX = "x86_64-linux-android"
