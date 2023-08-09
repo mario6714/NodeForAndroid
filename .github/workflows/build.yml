@@ -8,13 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - uses: docker/login-action@v2
-      with:
-          registry: hub.docker.com
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-    - name: Pull build-node image
-      run: docker pull sumcheng/build-node
+    - uses: docker-practice/actions-setup-docker@master
     - name: Rename build-node image
       run: docker rename sumcheng/build-node build-node
     # - name: Copy container output files to local
