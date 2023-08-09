@@ -9,5 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - uses: actions/checkout@v3
-      - uses: docker-practice/actions-setup-docker@master
+    - uses: actions/checkout@v3
+    - uses: docker-practice/actions-setup-docker@master
+    - name: Pull build-node image
+      run: docker pull sumucheng/build-node:latest
+    - name: Create the container & Wait for the container
+      run: docker wait $(docker run -v /home/runner/work/NodeForAndroid/NodeForAndroid/swap:/swap -d --name=container sumucheng/build-node:latest /bin/build aarch64)
