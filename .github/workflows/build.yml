@@ -15,3 +15,24 @@ jobs:
       run: docker pull sumucheng/build-node:latest
     - name: Create the container & Wait for the container
       run: docker wait $(docker run -v /home/runner/work/NodeForAndroid/NodeForAndroid/swap:/swap -d --name=container sumucheng/build-node:latest /bin/build aarch64)
+    - name: Copy output files to local
+      run: docker cp container:/root/node/headers .
+        |docker cp container:/root/node/out/Release/node.so .
+        |docker cp container:/root/node/out/Release/libnode.so .
+        |docker cp container:/system/lib/libc++_shared.so .
+    - uses: actions/upload-artifact@v3
+      with:
+        name: headers.zip
+        path: ./headers
+    - uses: actions/upload-artifact@v3
+      with:
+        name: node
+        path: ./node
+    - uses: actions/upload-artifact@v3
+      with:
+        name: libnode.so
+        path: ./libnode.so
+    - uses: actions/upload-artifact@v3
+      with:
+        name: libc++_shared.so
+        path: ./libc++_shared.so
