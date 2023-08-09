@@ -10,8 +10,8 @@ jobs:
     - uses: actions/checkout@v3
     - uses: docker/login-action@v2
       with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
     - name: Pull build-node image
       run: docker pull sumcheng/build-node
     - name: Rename build-node image
