@@ -24,18 +24,22 @@ jobs:
       with:
         name: headers.zip
         path: ./headers
+        if-no-files-found: error
     - uses: actions/upload-artifact@v3
       with:
         name: node
         path: ./node
+        if-no-files-found: error
     - uses: actions/upload-artifact@v3
       with:
         name: libnode.so
         path: ./libnode.so
+        if-no-files-found: error
     - uses: actions/upload-artifact@v3
       with:
         name: libc++_shared.so
         path: ./libc++_shared.so
+        if-no-files-found: error
         
   build-arm:
   
@@ -57,18 +61,23 @@ jobs:
       with:
         name: headers.zip
         path: ./headers
+        if-no-files-found: error
     - uses: actions/upload-artifact@v3
       with:
         name: node
         path: ./node
+        if-no-files-found: error
     - uses: actions/upload-artifact@v3
       with:
         name: libnode.so
         path: ./libnode.so
+        if-no-files-found: error
     - uses: actions/upload-artifact@v3
       with:
         name: libc++_shared.so
         path: ./libc++_shared.so
+        if-no-files-found: error
+
   
   build-x86_64:
   
@@ -90,18 +99,22 @@ jobs:
       with:
         name: headers.zip
         path: ./headers
+        if-no-files-found: error
     - uses: actions/upload-artifact@v3
       with:
         name: node
         path: ./node
+        if-no-files-found: error
     - uses: actions/upload-artifact@v3
       with:
         name: libnode.so
         path: ./libnode.so
+        if-no-files-found: error
     - uses: actions/upload-artifact@v3
       with:
         name: libc++_shared.so
         path: ./libc++_shared.so
+        if-no-files-found: error
   
   build-x86:
   
@@ -123,15 +136,19 @@ jobs:
       with:
         name: headers.zip
         path: ./headers
+        if-no-files-found: error
     - uses: actions/upload-artifact@v3
       with:
         name: node
         path: ./node
+        if-no-files-found: error
     - uses: actions/upload-artifact@v3
       with:
         name: libnode.so
         path: ./libnode.so
+        if-no-files-found: error
     - uses: actions/upload-artifact@v3
       with:
         name: libc++_shared.so
         path: ./libc++_shared.so
+        if-no-files-found: error
