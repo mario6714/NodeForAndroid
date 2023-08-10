@@ -17,7 +17,7 @@ jobs:
       run: docker run --privileged -v /home/runner/work/NodeForAndroid/NodeForAndroid/swap:/swap -t --name=container sumucheng/build-node:latest /bin/build aarch64
     - name: Copy output files to local
       run: docker cp container:/root/node/headers .
-        |docker cp container:/root/node/out/Release/node.so .
+        |docker cp container:/root/node/out/Release/node .
         |docker cp container:/root/node/out/Release/libnode.so .
         |docker cp container:/system/lib/libc++_shared.so .
     - uses: actions/upload-artifact@v3
@@ -50,7 +50,7 @@ jobs:
       run: docker run --privileged -v /home/runner/work/NodeForAndroid/NodeForAndroid/swap:/swap -t --name=container sumucheng/build-node:latest /bin/build arm
     - name: Copy output files to local
       run: docker cp container:/root/node/headers .
-        |docker cp container:/root/node/out/Release/node.so .
+        |docker cp container:/root/node/out/Release/node .
         |docker cp container:/root/node/out/Release/libnode.so .
         |docker cp container:/system/lib/libc++_shared.so .
     - uses: actions/upload-artifact@v3
@@ -83,7 +83,7 @@ jobs:
       run: docker run --privileged -v /home/runner/work/NodeForAndroid/NodeForAndroid/swap:/swap -t --name=container sumucheng/build-node:latest /bin/build x86_64
     - name: Copy output files to local
       run: docker cp container:/root/node/headers .
-        |docker cp container:/root/node/out/Release/node.so .
+        |docker cp container:/root/node/out/Release/node .
         |docker cp container:/root/node/out/Release/libnode.so .
         |docker cp container:/system/lib/libc++_shared.so .
     - uses: actions/upload-artifact@v3
@@ -116,7 +116,7 @@ jobs:
       run: docker run --privileged -v /home/runner/work/NodeForAndroid/NodeForAndroid/swap:/swap -t --name=container sumucheng/build-node:latest /bin/build x86
     - name: Copy output files to local
       run: docker cp container:/root/node/headers .
-        |docker cp container:/root/node/out/Release/node.so .
+        |docker cp container:/root/node/out/Release/node .
         |docker cp container:/root/node/out/Release/libnode.so .
         |docker cp container:/system/lib/libc++_shared.so .
     - uses: actions/upload-artifact@v3
