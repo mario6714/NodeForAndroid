@@ -22,22 +22,22 @@ jobs:
         |docker cp container:/system/lib/libc++_shared.so .
     - uses: actions/upload-artifact@v3
       with:
-        name: headers_arm64.zip
+        name: headers.zip
         path: ./headers
         if-no-files-found: error
     - uses: actions/upload-artifact@v3
       with:
-        name: node_arm64
+        name: node
         path: ./node
         if-no-files-found: error
     - uses: actions/upload-artifact@v3
       with:
-        name: libnode_arm64.so
+        name: libnode.so
         path: ./libnode.so
         if-no-files-found: error
     - uses: actions/upload-artifact@v3
       with:
-        name: libc++_shared_arm64.so
+        name: libc++_shared.so
         path: ./libc++_shared.so
         if-no-files-found: error
         
@@ -59,22 +59,22 @@ jobs:
         |docker cp container:/system/lib/libc++_shared.so .
     - uses: actions/upload-artifact@v3
       with:
-        name: headers_arm.zip
+        name: headers.zip
         path: ./headers
         if-no-files-found: error
     - uses: actions/upload-artifact@v3
       with:
-        name: node_arm
+        name: node
         path: ./node
         if-no-files-found: error
     - uses: actions/upload-artifact@v3
       with:
-        name: libnode_arm.so
+        name: libnode.so
         path: ./libnode.so
         if-no-files-found: error
     - uses: actions/upload-artifact@v3
       with:
-        name: libc++_shared_arm.so
+        name: libc++_shared.so
         path: ./libc++_shared.so
         if-no-files-found: error
 
@@ -97,22 +97,22 @@ jobs:
         |docker cp container:/system/lib/libc++_shared.so .
     - uses: actions/upload-artifact@v3
       with:
-        name: headers_x86_64.zip
+        name: headers.zip
         path: ./headers
         if-no-files-found: error
     - uses: actions/upload-artifact@v3
       with:
-        name: node_x86_64
+        name: node
         path: ./node
         if-no-files-found: error
     - uses: actions/upload-artifact@v3
       with:
-        name: libnode_x86_64.so
+        name: libnode.so
         path: ./libnode.so
         if-no-files-found: error
     - uses: actions/upload-artifact@v3
       with:
-        name: libc++_shared_x86_64.so
+        name: libc++_shared.so
         path: ./libc++_shared.so
         if-no-files-found: error
   
@@ -134,21 +134,21 @@ jobs:
         |docker cp container:/system/lib/libc++_shared.so .
     - uses: actions/upload-artifact@v3
       with:
-        name: headers_x86.zip
+        name: headers.zip
         path: ./headers
         if-no-files-found: error
     - uses: actions/upload-artifact@v3
       with:
-        name: node_x86
+        name: node
         path: ./node
         if-no-files-found: error
     - uses: actions/upload-artifact@v3
       with:
-        name: libnode_x86.so
+        name: libnode.so
         path: ./libnode.so
         if-no-files-found: error
     - uses: actions/upload-artifact@v3
       with:
-        name: libc++_sharedx86.so
+        name: libc++_shared.so
         path: ./libc++_shared.so
         if-no-files-found: error
