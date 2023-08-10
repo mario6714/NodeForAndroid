@@ -74,4 +74,4 @@ GYP_DEFINES += " host_os=" + host_os + " OS=android"
 os.environ['GYP_DEFINES'] = GYP_DEFINES
 
 if os.path.exists("./configure"):
-    os.system("./configure --dest-cpu=" + DEST_CPU + " --dest-os=android --without-inspector --without-intl --without-node-snapshot --without-node-code-cache --without-npm --without-etw --without-report --without-snapshot --without-siphash --without-corepack --openssl-no-asm --with-arm-float-abi=hard --with-arm-fpu=neon --cross-compiling --partly-static")
+    os.system("./configure --dest-cpu=" + DEST_CPU + " --dest-os=android --without-inspector --without-intl --without-node-snapshot --without-node-code-cache --without-npm --without-report --without-snapshot --without-siphash --without-corepack --openssl-no-asm --with-arm-float-abi=hard --with-arm-fpu=neon --cross-compiling --partly-static")
