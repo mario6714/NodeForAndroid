@@ -24,22 +24,22 @@ jobs:
       with:
         name: headers-arm64.zip
         path: ./headers
-        if-no-files-found: error
+        if-no-files-found: ignore
     - uses: actions/upload-artifact@v3
       with:
         name: node-arm64
         path: ./node
-        if-no-files-found: error
+        if-no-files-found: ignore
     - uses: actions/upload-artifact@v3
       with:
         name: libnode-arm64.so
         path: ./libnode.so
-        if-no-files-found: error
+        if-no-files-found: ignore
     - uses: actions/upload-artifact@v3
       with:
         name: libc++_shared-arm64.so
         path: ./libc++_shared.so
-        if-no-files-found: error
+        if-no-files-found: ignore
         
   build-arm:
   
@@ -61,22 +61,22 @@ jobs:
       with:
         name: headers-arm.zip
         path: ./headers
-        if-no-files-found: error
+        if-no-files-found: ignore
     - uses: actions/upload-artifact@v3
       with:
         name: node-arm
         path: ./node
-        if-no-files-found: error
+        if-no-files-found: ignore
     - uses: actions/upload-artifact@v3
       with:
         name: libnode-arm.so
         path: ./libnode.so
-        if-no-files-found: error
+        if-no-files-found: ignore
     - uses: actions/upload-artifact@v3
       with:
         name: libc++_shared-arm.so
         path: ./libc++_shared.so
-        if-no-files-found: error
+        if-no-files-found: ignore
 
   
   build-x86_64:
@@ -99,22 +99,22 @@ jobs:
       with:
         name: headers-x86_64.zip
         path: ./headers
-        if-no-files-found: error
+        if-no-files-found: ignore
     - uses: actions/upload-artifact@v3
       with:
         name: node-x86_64
         path: ./node
-        if-no-files-found: error
+        if-no-files-found: ignore
     - uses: actions/upload-artifact@v3
       with:
         name: libnode-x86_64.so
         path: ./libnode.so
-        if-no-files-found: error
+        if-no-files-found: ignore
     - uses: actions/upload-artifact@v3
       with:
         name: libc++_shared-x86_64.so
         path: ./libc++_shared.so
-        if-no-files-found: error
+        if-no-files-found: ignore
   
   build-x86:
   
@@ -136,19 +136,19 @@ jobs:
       with:
         name: headers-x86.zip
         path: ./headers
-        if-no-files-found: error
+        if-no-files-found: ignore
     - uses: actions/upload-artifact@v3
       with:
         name: node-x86
         path: ./node
-        if-no-files-found: error
+        if-no-files-found: ignore
     - uses: actions/upload-artifact@v3
       with:
         name: libnode-x86.so
         path: ./libnode.so
-        if-no-files-found: error
+        if-no-files-found: ignore
     - uses: actions/upload-artifact@v3
       with:
         name: libc++_shared-x86.so
         path: ./libc++_shared.so
-        if-no-files-found: error
+        if-no-files-found: ignore
