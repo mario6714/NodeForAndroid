@@ -14,7 +14,7 @@ jobs:
     - name: Pull build-node image
       run: docker pull node:latest
     - name: Create the container & Wait for the container
-      run: docker run --privileged -v /home/runner/work/NodeForAndroid/NodeForAndroid/swap:/swap -t --name=container sumucheng/build-node:latest /bin/build aarch64
+      run: docker run --privileged -v /home/runner/work/NodeForAndroid/NodeForAndroid/swap:/swap -t --name=container node:latest /usr/src/app aarch64
     - name: Copy output files to local
       run: docker cp container:/root/node/headers .
         |docker cp container:/root/node/out/Release/node .
