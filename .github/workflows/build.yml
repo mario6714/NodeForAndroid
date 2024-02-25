@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - uses: docker-practice/actions-setup-docker@master
     - name: Pull build-node image
       run: docker pull sumucheng/build-node
@@ -20,22 +20,22 @@ jobs:
         |docker cp container:/root/node/out/Release/node .
         |docker cp container:/root/node/out/Release/libnode.so .
         |docker cp container:/system/lib/libc++_shared.so .
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: headers-arm64.zip
         path: ./headers
         if-no-files-found: ignore
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: node-arm64
         path: ./node
         if-no-files-found: ignore
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: libnode-arm64.so
         path: ./libnode.so
         if-no-files-found: ignore
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: libc++_shared-arm64.so
         path: ./libc++_shared.so
@@ -46,7 +46,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - uses: docker-practice/actions-setup-docker@master
     - name: Pull build-node image
       run: docker pull sumucheng/build-node:latest
@@ -57,22 +57,22 @@ jobs:
         |docker cp container:/root/node/out/Release/node .
         |docker cp container:/root/node/out/Release/libnode.so .
         |docker cp container:/system/lib/libc++_shared.so .
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: headers-arm.zip
         path: ./headers
         if-no-files-found: ignore
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: node-arm
         path: ./node
         if-no-files-found: ignore
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: libnode-arm.so
         path: ./libnode.so
         if-no-files-found: ignore
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: libc++_shared-arm.so
         path: ./libc++_shared.so
@@ -84,7 +84,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - uses: docker-practice/actions-setup-docker@master
     - name: Pull build-node image
       run: docker pull sumucheng/build-node:latest
@@ -95,22 +95,22 @@ jobs:
         |docker cp container:/root/node/out/Release/node .
         |docker cp container:/root/node/out/Release/libnode.so .
         |docker cp container:/system/lib/libc++_shared.so .
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: headers-x86_64.zip
         path: ./headers
         if-no-files-found: ignore
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: node-x86_64
         path: ./node
         if-no-files-found: ignore
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: libnode-x86_64.so
         path: ./libnode.so
         if-no-files-found: ignore
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: libc++_shared-x86_64.so
         path: ./libc++_shared.so
@@ -121,7 +121,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - uses: docker-practice/actions-setup-docker@master
     - name: Pull build-node image
       run: docker pull sumucheng/build-node:latest
@@ -132,22 +132,22 @@ jobs:
         |docker cp container:/root/node/out/Release/node .
         |docker cp container:/root/node/out/Release/libnode.so .
         |docker cp container:/system/lib/libc++_shared.so .
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: headers-x86.zip
         path: ./headers
         if-no-files-found: ignore
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: node-x86
         path: ./node
         if-no-files-found: ignore
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: libnode-x86.so
         path: ./libnode.so
         if-no-files-found: ignore
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: libc++_shared-x86.so
         path: ./libc++_shared.so
